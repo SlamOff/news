@@ -123,6 +123,70 @@ label.error {
 .mfp-close-btn-in .mfp-close {
 	color: #fff!important;
 }
+.toggle_btn {
+display: none;
+height: 30px;
+width: 30px;
+position: absolute;
+z-index: 200;
+top: 50px;
+right: 15px;
+left: auto;
+background-color: #305188;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+-ms-border-radius: 3px;
+-o-border-radius: 3px;
+border-radius: 3px;
+}
+.toggle_btn .sandwich {
+	width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.toggle_btn .sandwich span {
+	height: 2px;
+    width: 24px;
+    position: relative;
+    border-radius: 2px;
+    left: 3px;
+    background-color: #fff;
+    display: block;
+}
+.toggle_btn .sandwich span.sw-topper {
+	top: 6px;
+    transition: transform 0.3s, top 0.2s;
+}
+.toggle_btn .sandwich span.sw-bottom {
+	top: 12px;
+    transition: transform 0.3s, top 0.2s;
+    transition-delay: 0.1s, 0s;
+}
+.toggle_btn .sandwich span.sw-footer {
+	top: 18px;
+    transition: all 0.5s;
+    transition-delay: 0.1s;
+}
+.toggle_btn .sandwich.active .sw-topper {
+	top: 15px;
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+.toggle_btn .sandwich.active .sw-bottom {
+	top: 13px;
+	-moz-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.toggle_btn .sandwich.active .sw-footer {
+	opacity: 0;
+	top: 0;
+	transform: rotate(180deg);
+}
 h1{
 	font: 72px "PFDinDisplayPro-Black", sans-serif;
 	font-weight: bold;

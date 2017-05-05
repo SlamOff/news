@@ -168,6 +168,27 @@
 	footer a, footer p {
 		float: none;
 	}
+	.toggle_btn {
+		display: block;
+	}
+	.menu {
+		height: auto;
+		display: none;
+	}
+	.menu ul li {
+		display: block;
+		margin-right: 0;
+	}
+	.menu ul {
+		float: none;
+		text-align: center;
+		display: block;
+	}
+	.news .news__left {
+		margin-top: 15px;
+	}
+}
+
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
