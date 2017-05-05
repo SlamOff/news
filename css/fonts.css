@@ -1,0 +1,20 @@
+@font-face {
+	font-family: "Arial-Regular";
+	src: url("../fonts/arial.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Arial-Bold";
+	src: url("../fonts/arialbd.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Arial-blk";
+	src: url("../fonts/ariblk.ttf") format("truetype");
+}
+@font-face {
+	font-family: "ARIALN";
+	src: url("../fonts/ARIALN.TTF") format("truetype");
+}
+@font-face {
+	font-family: "ARIALNB";
+	src: url("../fonts/ARIALNB.TTF") format("truetype");
+}
