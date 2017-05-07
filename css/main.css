@@ -129,7 +129,7 @@ height: 30px;
 width: 30px;
 position: absolute;
 z-index: 200;
-top: 50px;
+top: 200px;
 right: 15px;
 left: auto;
 background-color: #305188;
@@ -209,6 +209,9 @@ header {
 	position: relative;
 	padding-top: 10px;
 }
+header a {
+	font-size: 16px;
+}
 header a:visited,
 header a:focus {
 	color: #fff;
@@ -242,19 +245,91 @@ header a:last-of-type {
 header a:last-of-type:after {
 	content: "";
 	background-color: #578ac5;
-	height: 32px;
+	height: 26px;
 	position: absolute;
 	width: 3px;
 	right: -7px;
-	top: -6px;
+	top: -5px;
+}
+
+header .search {
+	float: right;
+	margin-top: 15px;
+	position: relative;
+	border-radius: 5px;
+}
+header input[type="submit"] {
+	position: absolute;
+	height: 22px;
+	vertical-align: middle;
+	-webkit-appearance: none;
+	border: 0;
+	border-left: 2px solid #999;
+	width: 30px;
+	top: 2px;
+	right: 2px;
+	-webkit-background-size: 60%;
+	background-color: #fff;
+	background-size: 60%;
+	background-image: url(../img/search.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	
+}
+header .search:after {
+	display: table;
+	content: "";
+	clear: both;
+}
+header .search input[type="search"] {
+	border: 0;
+	border-radius: 6px 6px 6px 0;
+	height: 26px;
+	text-indent: 4px;
+	width: 280px;
 }
 main {
 	background-color: #fefefe;
 	min-height: 55px;
-	padding-top: 5px;
 }
-.logo {
+main .exchange {
+	padding-top: 10px;
+}
+main .exchange h5 {
+	color: #305188;
+	font-size: 18px;
+	width: 50%;
+	margin: 0;
+	float: left;
+}
+main .exchange p {
+	width: 50%;
+	float: left;
+	font-size: 12px;
+	margin: 0;
+	color: #305188;
+	padding-top: 4px;
+	font-weight: bold;
+}
+main .exchange em {
+	font-style: normal;
+	color: #999;
+}
+main .exchange em:after {
+	content: "▲";
+	color: green;
+}
+main .exchange h5 span {
+	font-size: 10px;
+	position: relative;
+	top: -3px;
+}
+main .weather img {
+	width: 100%;
+}
+main .logo {
 	padding-left: 30px;
+	padding-top: 5px;
 }
 .menu {
 	height: 25px;
@@ -270,11 +345,11 @@ main {
 	display: inline-block;
 	margin-right: 20px;
 	color: #305188;
-	font-family: "ARIALN";
-	font-size: 18px;
+	font-family: "Phenomena-Bold";
+	font-size: 20px;
 }
 .menu ul li.active {
-	font-family: "ARIALNB", sans-serif;
+	font-family: "Phenomena-Black", sans-serif;
 }
 .menu ul li:last-of-type {
 	margin-right: 0;
@@ -315,7 +390,6 @@ section {
 }
 .news .news__left .date_news p a:hover {
 	color: #305188;
-	text-decoration: underline;
 }
 .news .news__pict {
 	
@@ -362,13 +436,12 @@ section {
 	color: #cb525d;
 	font-size: 12px;
 	text-transform: none;
-
 }
 .news .bottom_row span {
 	position: absolute;
 	bottom: 5px;
 	left: 45%;
-	color: #ddd;
+	color: #777;
 	font-size: 14px;
 }
 .news .bottom_row .col-md-7 div,
@@ -437,6 +510,9 @@ section {
 	margin-bottom: 10px;
 	position: relative;
 }
+.news .news__selected span {
+	color: #999;
+}
 .news .news__selected:last-of-type {
 	margin-bottom: 0;
 }
@@ -451,9 +527,58 @@ section {
 	margin-right: 10px;
 }
 .news .news__selected p {
-	text-decoration: underline;
+	/*text-decoration: underline;*/
 	color: #305188;
 	padding-top: 40px;
+}
+.news .news__selected--post {
+	padding: 15px;
+}
+.news .news__selected--post:last-of-type {
+	margin-bottom: 30px;
+}
+.news .news__selected--post h4 {
+	font-size: 26px;
+}
+.news .news__selected--post p {
+	color: #090909;
+	padding-top: 0;
+	margin-bottom: 20px;
+}
+.news .news__selected--post .navigation {
+	float: right;
+}
+.news .news__selected--post .navigation span.active {
+	font-weight: bold;
+	color: #999;
+}
+.news .news__selected--post img {
+	width: 100%;
+	display: block;
+	float: none;
+	max-width: 200%;
+	margin-bottom: 20px;
+}
+.news .news__selected--post .author {
+	text-align: right;
+	display: block;
+}
+.news .news__selected--post .comments {
+	color: #305187;
+	font-size: 14px;
+	float: left;
+	margin-top: 20px;
+}
+.news .news__selected--post .news_social {
+	float: right;
+	margin-top: 25px;
+}
+.news .news__selected--post .comments p {
+	color: #305187;
+	font-size: 18px;
+}
+.news .news__selected--post .comments p strong {
+	color: #cb525d;
 }
 .banner {
 	background-image: url(../img/banner.jpg);
@@ -504,7 +629,6 @@ section {
 .social .navigation p {
 	font-size: 12px;
 	margin-bottom: 3px;
-	text-decoration: underline;
 }
 .counter {
 	line-height: 55px;
@@ -530,7 +654,6 @@ footer {
 	line-height: 30px;
 }
 footer a,
-
 footer p {
 	color: #fff;
 	font-size: 11px;
@@ -559,4 +682,23 @@ footer .feedback img {
 }
 footer a:hover {
 	color: #fff;
+}
+.offer i {
+	font-size: 20px!important;
+	margin-right: 10px;
+}
+footer i {
+	color: #fff;
+	font-size: 20px!important;
+	margin-right: 10px;
+}
+aside img {
+	width: 100%;
+	max-width: 370px;
+}
+h3 {
+	margin-top: 0;
+	color: #bbb;
+	font-size: 58px;
+	font-weight: 900;
 }

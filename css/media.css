@@ -5,6 +5,16 @@
 	body {
 		font-size: 16px;
 	}
+	main {
+		min-height: 45px;
+	}
+	main .logo {
+		padding-left: 15px;
+		padding-top: 12px;
+	}
+	main .exchange {
+		padding-top: 7px;
+	}
 	.social .col-xs-12 .offer,
 	footer .feedback {
 		width: 28%;
@@ -22,8 +32,19 @@
 	footer .row div  {
 		text-align: center;
 	}
+	main .exchange h5,
+	main .exchange p {
+		text-align: right;
+	}
+	main .weather {
+		float: right;
+		margin-top: 12px;
+	}
+	main div {
+		height: 40px;
+	}
 	main {
-		min-height: 45px;
+		min-height: 100px;
 	}
 	.news .row {
 		display: block;
@@ -108,6 +129,25 @@
 	footer .feedback {
 		background-color: inherit;
 	}
+	.news .news__selected img {
+		max-width: 70%;
+	}
+	aside{
+		display: none;
+	}
+	h3 {
+		margin-top: 10px;
+	}
+	.news .news__selected--post .comments,
+	.news .news__selected--post .news_social {
+		float: none;
+	}
+	.news .news__selected--post {
+		padding-top: 20px;
+	}
+	.news .news__selected--post h4 {
+		margin-top: 20px;
+	}
 }
 
 /* Small Devices, Tablets */
@@ -118,8 +158,24 @@
 	.banner {
 		display: none;
 	}
+	main {
+		min-height: 170px;
+	}
+	main .exchange p {
+		text-align: left;
+		padding-left: 10px;
+	}
+	main .exchange h5 {
+		padding-right: 10px;
+	}
+	main .weather img {
+		max-width: 300px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
 	header, header:before {
-		height: 40px;
+		height: 80px;
 		min-height: 1px;
 	}
 	.news .news__pict {
@@ -145,9 +201,6 @@
 	}
 	.social {
 		padding-top: 10px;
-	}
-	.news .news__selected img {
-		max-width: 100%;
 	}
 	.logo {
 		padding-left: 15px;
@@ -180,6 +233,7 @@
 		margin-right: 0;
 	}
 	.menu ul {
+		margin-bottom: 0;
 		float: none;
 		text-align: center;
 		display: block;
@@ -192,7 +246,20 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-
+	.news .news__selected img {
+		max-width: 100%;
+	}
+	main .exchange h5 {
+		text-align: left;
+		width: 40%;
+		padding: 0;
+	}
+	main .exchange p {
+		width: 60%;
+	}
+	main .exchange h5 span {
+		display: none;
+	}
 }
 
 /* Custom, iPhone Retina */
