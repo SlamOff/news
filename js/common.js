@@ -17,10 +17,46 @@ $(document).ready(function() {
 			$('.menu').slideDown(300);
 		};
 	});
-	/*
-	// ScrollTo
-	$('.navbar-collapse a').mPageScroll2id();
-	*/
+	//comments toggle
+	$('.news .news__selected--post .comments p').click(function(){
+		$(this).next('.comments__open').toggleClass('hidden');
+	});
+	//answer toggle
+	$('.news .news__selected--post .comments .comments__open .comments_left .answer h6 em').text('▼');
+	$('.news .news__selected--post .comments .comments__open .comments_left .answer h6 em.up').text('▲');
+	$('.news .news__selected--post .comments .comments__open .comments_left .answer h6.see_answer').click(function(){
+		$('.news .news__selected--post .comments .comments__open .comments_left .answer h6 em').text('▲');
+		$('.news .news__selected--post .comments .comments__open .comments_left .answer h6 em.up').text('▼');
+		$(this).siblings('.answer__open').toggleClass('hidden');
+		$(this).find('em').toggleClass('up');
+
+		var parWidth = [];
+
+		var elems = $(this).siblings('.answer__open').find('p');
+		var elemsArr = elems.map(function(){
+			return this;
+		}).get();
+		console.log(elemsArr);
+		var changedWidth = [];
+		elemsArr.map(function(name) {
+			parWidth = $(name).width();
+			console.log(name);
+		});
+		for(var i = 0; i < elemsArr.length; i++){
+			changedWidth.push(parWidth - i*10);
+			console.log(this);
+		}
+		console.log(changedWidth);
+		console.log(elemsArr);
+		elems.each(function(n){
+			$(this).width(changedWidth[n]);
+		});
+	});
+
+	// get answer
+	$('.make_answer').click(function(){
+		$('.comments_right').fadeIn();
+	});
 	// menu toggle
 	$('.menu ul li').click(function(){
 		$('.menu ul li').removeClass('active');
@@ -30,12 +66,22 @@ $(document).ready(function() {
 		$('.news__selected--post .navigation span').removeClass('active');
 		$(this).addClass('active');
 	});
+	
 
+	// for (var i = 0; i < elemsArr.length; i++){
+		
+		
+	// }
+
+	
+	
+
+
+	
 	//popup
 	$('.popup').magnificPopup({
 		type: 'inline'
 	});
-
 	//mask
 	jQuery(function($){
 		$('.phone').mask('+38(099) 999-9999');

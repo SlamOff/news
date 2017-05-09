@@ -72,15 +72,15 @@
 				<div class="col-xs-12">
 					<div class="menu__box">
 						<ul>
-							<li class="active"><a href="">Лента новостей</a></li>
-							<li><a href="#">Политика</a></li>
-							<li><a href="#">Общество</a></li>
-							<li><a href="#">Экономика</a></li>
-							<li><a href="#">Происшествия</a></li>
-							<li><a href="#">Спорт</a></li>
-							<li><a href="#">Наука</a></li>
-							<li><a href="#">Культура</a></li>
-							<li><a href="#">Экология</a></li>
+							<li class="active"><a href="post.html">Лента новостей</a></li>
+							<li><a href="politics.html">Политика</a></li>
+							<li><a href="society.html">Общество</a></li>
+							<li><a href="economics.html">Экономика</a></li>
+							<li><a href="event.html">Происшествия</a></li>
+							<li><a href="sport.html">Спорт</a></li>
+							<li><a href="science.html">Наука</a></li>
+							<li><a href="culture.html">Культура</a></li>
+							<li><a href="ecology.html">Экология</a></li>
 						</ul>
 					</div>
 				</div>
@@ -92,7 +92,7 @@
 	<!-- news -->
 	<section class="news">
 		<div class="container">
-			<h3>Лента новостей</h3>
+			<h3 class="news__title">Лента новостей</h3>
 			<div class="row">
 				<div class="col-md-9">
 					<div class="news__selected news__selected--post">
@@ -100,8 +100,8 @@
 						<div class="navigation">
 							<a href="#"><span class="active">Главная</span></a> / 
 							<a href="#"><span>Новости</span></a> / 
-							<a href="#"><span>7.02.2017</span></a> / 
-							<a href="#"><span>#10</span></a>
+							<a class="news_date" href="#"><span>7.02.2017</span></a> / 
+							<a class="news_number" href="#"><span>#10</span></a>
 						</div>
 						<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime modi necessitatibus temporibus laborum, ullam iusto laudantium possimus iure ipsam fugiat!</h4>
 						<img src="img/news_1.jpg" alt="">
@@ -111,7 +111,55 @@
 						<div class="news_footer">
 							<div class="comments">
 								<a href="#">Постоянный адрес новости</a><br>
-								<a href=""><p>Комментарии (<strong>3</strong>)</p></a>
+								<p>Комментарии (<strong>3</strong>)</p>
+								<div class="comments__open hidden">
+									<div class="comments_left">
+										<span class="date">7 февраля 2017 18:00</span>
+										<span class="post_author">Гость</span>
+										<p class="main_answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, dolorum consequatur natus corporis culpa ipsa. Sed architecto, recusandae? Nulla laudantium eum esse culpa dicta cumque blanditiis excepturi dolore magnam illo.</p>
+										<div class="answer">
+											<h6 class="see_answer">Посмотреть ответы <em>▼</em></h6>
+											<div class="like_dislike">
+												<div class="like">
+													<span>12</span>
+													<img src="img/like.png" alt="">
+												</div>
+												<div class="dislike">
+													<span>1</span>
+													<img src="img/dislike.png" alt="">
+												</div>
+											</div>
+											<h6 class="make_answer">Ответить</h6>
+											<div class="clearfix"></div>
+											<div class="answer__open hidden">
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, id. <span class="make_answer">Ответить</span></p>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, id. <span class="make_answer">Ответить</span></p>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, id. <span class="make_answer">Ответить</span></p>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, id. <span class="make_answer">Ответить</span></p>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, id. <span class="make_answer">Ответить</span></p>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, id. <span class="make_answer">Ответить</span></p>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, id. <span class="make_answer">Ответить</span></p>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, id. <span class="make_answer">Ответить</span></p>
+											</div>
+										</div>
+									</div>
+									<div class="comments_right">
+										<div class="reg_answer">
+											<div class="login_answer">
+												<a href="#reg" class="popup">Зарегистрироваться</a>
+												<a href="#login" class="popup">Войти</a>
+												<a class="soc_reg" href="vk"><img src="img/social_1.png" alt=""></a>
+												<a class="soc_reg" href="twitterw"><img src="img/social_2.png" alt=""></a>
+												<a class="soc_reg" href="fb"><img src="img/social_3.png" alt=""></a>
+											</div>
+											<form class="text_answer" method="post" action="">
+												<input name="answer_author" type="text" placeholder="Гость">
+												<textarea name="answer_message" placeholder="Текст"></textarea>
+												<button type="submit">Отправить</button>
+											</form>
+										</div>
+									</div><div class="clearfix"></div>
+								</div>
 							</div>
 							<div class="news_social">
 								<img src="img/social.jpg" alt="">
@@ -131,12 +179,60 @@
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, totam, unde. Odit qui, id corporis! Omnis neque quia suscipit porro consectetur fugit iure corporis rerum, ullam asperiores, et nulla eum illo, alias delectus ratione soluta. Vel quaerat aspernatur consectetur inventore.</p>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea fugit iste maiores sapiente omnis nostrum earum aperiam non, facilis, cum!</p>
 						<div class="news_footer">
+						<div class="news_social">
+								<img src="img/social.jpg" alt="">
+							</div>
 							<div class="comments">
 								<a href="#">Постоянный адрес новости</a><br>
-								<a href=""><p>Комментарии (<strong>3</strong>)</p></a>
-							</div>
-							<div class="news_social">
-								<img src="img/social.jpg" alt="">
+								<p>Комментарии (<strong>3</strong>)</p>
+								<div class="comments__open hidden">
+									<div class="comments_left">
+										<span class="date">7 февраля 2017 18:00</span>
+										<span class="post_author">Гость</span>
+										<p class="main_answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, dolorum consequatur natus corporis culpa ipsa. Sed architecto, recusandae? Nulla laudantium eum esse culpa dicta cumque blanditiis excepturi dolore magnam illo.</p>
+										<div class="answer">
+											<h6 class="see_answer">Посмотреть ответы <em>▼</em></h6>
+											<div class="like_dislike">
+												<div class="like">
+													<span>12</span>
+													<img src="img/like.png" alt="">
+												</div>
+												<div class="dislike">
+													<span>1</span>
+													<img src="img/dislike.png" alt="">
+												</div>
+											</div>
+											<h6 class="make_answer">Ответить</h6>
+											<div class="clearfix"></div>
+											<div class="answer__open hidden">
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, id. <span class="make_answer">Ответить</span></p>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, id. <span class="make_answer">Ответить</span></p>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, id. <span class="make_answer">Ответить</span></p>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, id. <span class="make_answer">Ответить</span></p>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, id. <span class="make_answer">Ответить</span></p>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, id. <span class="make_answer">Ответить</span></p>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, id. <span class="make_answer">Ответить</span></p>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, id. <span class="make_answer">Ответить</span></p>
+											</div>
+										</div>
+									</div>
+									<div class="comments_right">
+										<div class="reg_answer">
+											<div class="login_answer">
+												<a href="#reg" class="popup">Зарегистрироваться</a>
+												<a href="#login" class="popup">Войти</a>
+												<a class="soc_reg" href="vk"><img src="img/social_1.png" alt=""></a>
+												<a class="soc_reg" href="twitterw"><img src="img/social_2.png" alt=""></a>
+												<a class="soc_reg" href="fb"><img src="img/social_3.png" alt=""></a>
+											</div>
+											<form class="text_answer" method="post" action="">
+												<input name="answer_author" type="text" placeholder="Гость">
+												<textarea name="answer_message" placeholder="Текст"></textarea>
+												<button type="submit">Отправить</button>
+											</form>
+										</div>
+									</div><div class="clearfix"></div>
+								</div>
 							</div>
 						</div>
 					</div>
