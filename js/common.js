@@ -24,6 +24,9 @@ $(document).ready(function() {
 	//answer toggle
 	$('.news .news__selected--post .comments .comments__open .comments_left .answer h6 em').text('▼');
 	$('.news .news__selected--post .comments .comments__open .comments_left .answer h6 em.up').text('▲');
+
+
+	// --------------------------
 	$('.news .news__selected--post .comments .comments__open .comments_left .answer h6.see_answer').click(function(){
 		$('.news .news__selected--post .comments .comments__open .comments_left .answer h6 em').text('▲');
 		$('.news .news__selected--post .comments .comments__open .comments_left .answer h6 em.up').text('▼');
@@ -52,6 +55,8 @@ $(document).ready(function() {
 			$(this).width(changedWidth[n]);
 		});
 	});
+	// ---------------------------
+
 
 	// get answer
 	$('.make_answer').click(function(){

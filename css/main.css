@@ -350,7 +350,7 @@ main .logo {
 	margin-right: 20px;
 	color: #305188;
 	font-family: "OpenSans-SemiBold", sans-serif;
-	font-size: 20px;
+	font-size: 18px;
 	letter-spacing: -2px;
 }
 .menu ul li.active {
@@ -366,7 +366,8 @@ section {
 }
 .news .news__left {
 	padding-left: 20px;
-	max-height: 330px;
+	max-height: 360px;
+	padding-bottom: 10px;
 }
 
 .news .news__left .date {
@@ -376,6 +377,23 @@ section {
 }
 .news .news__left .time {
 	margin-right: 10px;
+}
+.news .news__left .date_news {
+	position: relative;
+	z-index: 1;
+}
+.banner_link {
+	display: block;
+}
+.news .news__left .date_news:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 50px;
+	background-color: #bbb;
+	z-index: -1;
 }
 .news .news__left .date_news p a {
 	color: #333;
@@ -388,6 +406,10 @@ section {
 	border-bottom: 2px solid #ddd;
 	margin: 0;
 	padding: 6px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 16px;
 }
 .news .news__left .date_news p:last-of-type {
 	margin: 0;
@@ -404,6 +426,9 @@ section {
 .news .news__right {
 	background-image: url(../img/news_bg.jpg);
 	height: 100%;
+	-ms-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
 }
 .news .news__pict .left_head {
 	text-transform: uppercase;
