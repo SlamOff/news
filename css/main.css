@@ -392,7 +392,7 @@ section {
 	top: 0;
 	height: 100%;
 	width: 50px;
-	background-color: #bbb;
+	background-color: #ddd;
 	z-index: -1;
 }
 .news .news__left .date_news p a {
@@ -590,18 +590,18 @@ section {
 	float: right;
 }
 .news .news__selected--post .navigation .news_number span {
-	color: #305188;
-	font-weight: bold;
+	/*color: #305188;*/
+	/*font-weight: bold;*/
 }
 .news .news__selected--post .navigation .news_date span {
-	font-weight: bold;
+	/*font-weight: bold;*/
 }
 .news .news__selected--post .navigation span:hover {
-	color: #305188;
+	font-weight: bold;
 }
 .news .news__selected--post .navigation span.active {
 	font-weight: bold;
-	color: #305188;
+	/*color: #305188;*/
 }
 .news .news__selected--post img {
 	width: 100%;
