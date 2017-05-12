@@ -537,7 +537,7 @@ section {
 }
 .news .news__selected {
 	background-color: #fff;
-	margin-bottom: 10px;
+	margin-bottom: 10px!important;
 	position: relative;
 }
 .news .news__selected span {
@@ -622,6 +622,7 @@ section {
 }
 .news .news__selected--post .comments a {
 	color: inherit;
+	display: block;
 	font-weight: bold;
 }
 .news .news__selected--post .comments a:first-of-type {
