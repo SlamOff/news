@@ -537,14 +537,14 @@ section {
 }
 .news .news__selected {
 	background-color: #fff;
-	margin-bottom: 10px!important;
+	margin-bottom: 10px;
 	position: relative;
 }
 .news .news__selected span {
 	color: #999;
 }
 .news .news__selected:last-of-type {
-	margin-bottom: 0;
+	/*margin-bottom: 0;*/
 }
 .news .news__selected:after {
 	display: table;
