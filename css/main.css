@@ -382,10 +382,15 @@ section {
 	position: relative;
 	z-index: 1;
 }
+.news .news__left .date_news strong {
+	font-weight: 400;
+	background-color: #ddd;
+	padding: 3px;
+}
 .banner_link {
 	display: block;
 }
-.news .news__left .date_news:before {
+/*.news .news__left .date_news:before {
 	content: "";
 	position: absolute;
 	left: 0;
@@ -394,13 +399,16 @@ section {
 	width: 50px;
 	background-color: #ddd;
 	z-index: -1;
-}
+}*/
 .news .news__left .date_news p a {
 	color: #333;
 	-webkit-transition: .3s all;
 	-moz-transition: .3s all;
 	-ms-transition: .3s all;
 	transition: .3s all;
+}
+.news .news__left .date_news p a:hover {
+	text-decoration: underline;
 }
 .news .news__left .date_news p {
 	border-bottom: 2px solid #ddd;
@@ -525,9 +533,7 @@ section {
 	display: flex;
 	margin-bottom: 12px;
 }
-.news .row:last-of-type {
-	margin-bottom: 0;
-}
+
 .news .col-md-5 {
 	padding-right: 0;
 }
@@ -543,8 +549,8 @@ section {
 .news .news__selected span {
 	color: #999;
 }
-.news .news__selected:last-of-type {
-	/*margin-bottom: 0;*/
+.news .row.up_row .news__selected {
+	margin-bottom: 0;
 }
 .news .news__selected:after {
 	display: table;
@@ -561,8 +567,12 @@ section {
 	color: #305188;
 	padding-top: 40px;
 }
+.news .news__selected p:hover,
+.news .col-md-3 div p:hover {
+	text-decoration: underline;
+}
 .news .news__selected--post {
-	padding: 15px;
+	padding: 2px 15px 15px 15px;
 	overflow: hidden;
 	position: relative;
 }
@@ -580,11 +590,18 @@ section {
 }
 .news .news__selected--post h4 {
 	font-size: 26px;
+	text-decoration: underline;
+}
+.news .news__selected--post h4:hover {
+	color: #305188;
 }
 .news .news__selected--post p {
 	color: #111;
 	padding-top: 0;
 	margin-bottom: 20px;
+}
+.news .news__selected--post p:hover {
+	text-decoration: none;
 }
 .news .news__selected--post .navigation {
 	float: right;
@@ -597,11 +614,12 @@ section {
 	/*font-weight: bold;*/
 }
 .news .news__selected--post .navigation span:hover {
-	font-weight: bold;
+/*	font-weight: bold;
+*/	color: #305188;
 }
 .news .news__selected--post .navigation span.active {
-	font-weight: bold;
-	/*color: #305188;*/
+/*	font-weight: bold;
+*/	color: #305188;
 }
 .news .news__selected--post img {
 	width: 100%;
@@ -921,6 +939,7 @@ footer .feedback {
 	padding-left: 20px;
 	cursor: pointer;
 }
+
 .social .col-xs-12 .offer img,
 footer .feedback img {
 	margin-right: 5px;
@@ -933,6 +952,9 @@ footer .feedback img {
 }
 footer a:hover {
 	color: #fff;
+}
+footer .feedback a:focus {
+	color: #fff;	
 }
 .offer i {
 	font-size: 20px!important;
